@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <com.uvchip.mediacenter.filebrowser.HorizontalLayout
+    android:id="@+id/filePathLayout"
+    android:layout_width="match_parent"
+	android:layout_height="23dip"
+	android:background="@drawable/tray_handle_bg"
+	android:gravity="center_vertical"
+	android:visibility="invisible"
+	android:layout_alignParentTop="true">
+	</com.uvchip.mediacenter.filebrowser.HorizontalLayout>
+	
+	<LinearLayout android:id="@+id/empty_folder"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:visibility="invisible"
+		android:gravity="center">
+		
+		<TextView style="@style/tvNormal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:visibility="gone"
+		android:text="@string/tip_empty_folder"/>
+		<ImageView 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="center"
+		android:src="@drawable/empty_folder"/>
+		
+	</LinearLayout>
+	<!-- 
+	<ListView android:id="@+id/filesListView"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:cacheColorHint="#00000000"
+	android:divider="@color/transparent"
+	android:layout_margin="5dip"></ListView> -->
+	
+	<GridView
+    android:id="@+id/filesGridView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:padding="0dip"
+    android:verticalSpacing="10dip"
+    android:horizontalSpacing="5dip"
+    android:stretchMode="columnWidth"
+    android:gravity="top"
+    android:listSelector="@drawable/grid_selector"
+    />
+</RelativeLayout>
